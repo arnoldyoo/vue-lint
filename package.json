@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "format": "prettier --write 'src/**/*.{js,ts,vue}'"
+    "lint-stage": "lint-staged"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -33,11 +33,6 @@
     "prettier": "^2.4.1",
     "typescript": "~4.5.5",
     "vue-template-compiler": "^2.6.14"
-  },
-  "husky": {
-    "hooks": {
-        "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
