@@ -21,7 +21,17 @@ module.exports = {
         extraFileExtensions: ['.vue']
     },
     plugins: ['@typescript-eslint', 'prettier'],
-    ignorePatterns: ['vue.config.js', 'node_modules/', 'public/', 'tests/', 'src/lib/', 'src/custom.d.ts', '.eslintrc.js'],
+    ignorePatterns: [
+        'vue.config.js',
+        'node_modules/',
+        'public/',
+        'tests/',
+        'src/lib/',
+        'src/custom.d.ts',
+        '.eslintrc.js',
+        'src/shims-tsx.d.ts',
+        'src/shims-vue.d.ts'
+    ],
     rules: {
         quotes: ['warn', 'single'],
         'max-len': [
@@ -80,7 +90,7 @@ module.exports = {
                 'invalid-first-character-of-tag-name': true
             }
         ],
-        'import/no-unresolved': [2, {caseSensitive: false}]
+        'import/no-unresolved': 'off'
     },
     overrides: [
         {
@@ -89,5 +99,12 @@ module.exports = {
                 jest: true
             }
         }
-    ]
+    ],
+    settings: {
+        'import/resolver': {
+            node: {
+                xtensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.vue']
+            }
+        }
+    }
 };
