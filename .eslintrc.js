@@ -21,7 +21,7 @@ module.exports = {
         extraFileExtensions: ['.vue']
     },
     plugins: ['@typescript-eslint', 'prettier'],
-    ignorePatterns: ['vue.config.js', 'node_modules/', 'public/', 'tests/', 'src/lib/', 'src/custom.d.ts'],
+    ignorePatterns: ['vue.config.js', 'node_modules/', 'public/', 'tests/', 'src/lib/', 'src/custom.d.ts', '.eslintrc.js'],
     rules: {
         quotes: ['warn', 'single'],
         'max-len': [
@@ -79,7 +79,8 @@ module.exports = {
             {
                 'invalid-first-character-of-tag-name': true
             }
-        ]
+        ],
+        'import/no-unresolved': [2, {caseSensitive: false}]
     },
     overrides: [
         {
