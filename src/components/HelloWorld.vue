@@ -68,8 +68,8 @@ import {Component, Prop, Vue} from 'vue-property-decorator';
 @Component
 export default class HelloWorld extends Vue {
     @Prop() protected msg!: string;
-    private a = 10;
-    private b = 10000;
+
+    test() {}
 }
 </script>
 
