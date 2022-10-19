@@ -90,7 +90,7 @@ module.exports = {
                 'invalid-first-character-of-tag-name': true
             }
         ],
-        'import/no-unresolved': 'off'
+        'import/no-unresolved': 2
     },
     overrides: [
         {
