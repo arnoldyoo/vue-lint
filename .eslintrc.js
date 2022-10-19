@@ -6,17 +6,15 @@ module.exports = {
     },
     parser: 'vue-eslint-parser',
     extends: [
-        'plugin:vue/recommended',
         'eslint:recommended',
-        'plugin:import/recommended',
-        'plugin:import/typescript',
+        'plugin:vue/recommended',
         'plugin:@typescript-eslint/recommended',
+        'prettier',
         'plugin:prettier/recommended',
         '@vue/prettier'
     ],
     parserOptions: {
         parser: '@typescript-eslint/parser',
-        project: './tsconfig.json',
         ecmaVersion: 2020,
         extraFileExtensions: ['.vue']
     },
@@ -30,7 +28,9 @@ module.exports = {
         'src/custom.d.ts',
         '.eslintrc.js',
         'src/shims-tsx.d.ts',
-        'src/shims-vue.d.ts'
+        'src/shims-vue.d.ts',
+        '.eslintrc.js',
+        'babel.config.js'
     ],
     rules: {
         quotes: ['warn', 'single'],
@@ -82,15 +82,13 @@ module.exports = {
         ],
         '@typescript-eslint/no-explicit-any': 1,
         '@typescript-eslint/no-use-before-define': ['error', {functions: false}],
-        'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': ['error'],
         'vue/no-parsing-error': [
             'error',
             {
                 'invalid-first-character-of-tag-name': true
             }
-        ],
-        'import/no-unresolved': 2
+        ]
     },
     overrides: [
         {
@@ -99,12 +97,5 @@ module.exports = {
                 jest: true
             }
         }
-    ],
-    settings: {
-        'import/resolver': {
-            node: {
-                xtensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.vue']
-            }
-        }
-    }
+    ]
 };
