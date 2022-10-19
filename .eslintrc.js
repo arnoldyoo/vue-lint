@@ -49,9 +49,12 @@ module.exports = {
         'no-console': process.env.NODE_ENV === 'production' ? ['error', {allow: ['warn', 'error']}] : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-useless-escape': 'off',
-        '@typescript-eslint/camelcase': 'off',
-        '@typescript-eslint/no-inferrable-types': 'off',
-        '@typescript-eslint/ban-ts-ignore': 'off',
+        'vue/no-parsing-error': [
+            'error',
+            {
+                'invalid-first-character-of-tag-name': true
+            }
+        ],
         '@typescript-eslint/array-type': [
             'error',
             {
@@ -80,15 +83,14 @@ module.exports = {
                 ]
             }
         ],
+        '@typescript-eslint/prefer-as-const': 'error',
         '@typescript-eslint/no-explicit-any': 1,
         '@typescript-eslint/no-use-before-define': ['error', {functions: false}],
         '@typescript-eslint/no-unused-vars': ['error'],
-        'vue/no-parsing-error': [
-            'error',
-            {
-                'invalid-first-character-of-tag-name': true
-            }
-        ]
+        '@typescript-eslint/no-inferrable-types': 'off',
+        '@typescript-eslint/ban-ts-ignore': 'off',
+        '@typescript-eslint/ban-types': 'warn',
+        '@typescript-eslint/prefer-for-of': 'warn'
     },
     overrides: [
         {
