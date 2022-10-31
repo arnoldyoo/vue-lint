@@ -83,7 +83,7 @@ module.exports = {
             }
         ],
         '@typescript-eslint/prefer-as-const': 'error',
-        '@typescript-eslint/no-explicit-any': 2,
+        '@typescript-eslint/no-explicit-any': 1,
         '@typescript-eslint/no-use-before-define': ['error', {functions: false}],
         '@typescript-eslint/no-unused-vars': ['error'],
         '@typescript-eslint/no-inferrable-types': 'off',
