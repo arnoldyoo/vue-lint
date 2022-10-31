@@ -47,9 +47,9 @@
             "prettier --write"
         ],
         "*.{js,jsx,ts,vue}": [
-            "tsc-files --noEmit",
             "prettier --write",
-            "eslint --fix"
+            "eslint --fix",
+            "tsc-files --noEmit"
         ]
     }
 }

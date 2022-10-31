@@ -15,7 +15,7 @@
         "importHelpers": true,
         "resolveJsonModule": true,
         "strictPropertyInitialization": false,
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "baseUrl": ".",
         "types": ["webpack-env"],
         "paths": {
