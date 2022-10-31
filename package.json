@@ -6,7 +6,7 @@
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint-stage": "lint-staged",
-        "lint-test": "eslint . --ext .js,.ts,.tsx,.vue",
+        "lint-test": "eslint . --ext .ts,.tsx,.vue",
         "prettier-test": "prettier --write"
     },
     "dependencies": {
@@ -46,7 +46,7 @@
         "*.{json,html,css}": [
             "prettier --write"
         ],
-        "*.{js,jsx,ts,vue}": [
+        "*.{ts,vue}": [
             "prettier --write",
             "eslint --fix",
             "tsc-files --noEmit"
