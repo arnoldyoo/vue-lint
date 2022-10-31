@@ -5,24 +5,43 @@
         "strict": true,
         "jsx": "preserve",
         "moduleResolution": "node",
+        "strictNullChecks": false,
         "experimentalDecorators": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": true,
         "useDefineForClassFields": true,
         "sourceMap": true,
         "importHelpers": true,
         "resolveJsonModule": true,
         "strictPropertyInitialization": false,
         "noImplicitAny": false,
+        "allowJs": true,
         "baseUrl": ".",
         "types": ["webpack-env"],
         "paths": {
+            "@platformConfig/*": ["src/config/platform/pc/*", "src/config/platform/mobile/*", "src/config/platform/sdk/*"],
+            "@corePlatformConfig/*": [
+                "node_modules/seed/src/config/platform/pc/*",
+                "node_modules/seed/src/config/platform/mobile/*",
+                "node_modules/seed/src/config/platform/sdk/*"
+            ],
+            "@components/*": ["src/components/pc/*", "src/components/mobile/*"],
+            "@platformComponents/*": ["src/components/pc/*", "src/components/sdk/*"],
+            "@commonComponents/*": ["src/components/common/*"],
+            "@writeComponents/*": ["src/modules/write/components/pc/*", "src/modules/write/components/mobile/*"],
+            "@writeModule/*": ["src/modules/write/*"],
+            "@detailModule/*": ["src/modules/detail/*"],
+            "@detailComponents/*": ["src/modules/detail/components/pc/*", "src/modules/detail/components/mobile/*"],
+            "@coreComponents/*": ["node_modules/seed/src/components/*"],
+            "@contentComponents/*": ["src/modules/content/components/pc/*", "src/modules/content/components/mobile/*"],
+            "@router/*": ["src/router/web/*", "src/router/pc/*", "src/router/mobile/*", "src/router/sdk/*"],
+            "@layouts/*": ["src/layouts/web/*", "src/layouts/pc/*", "src/layouts/mobile/*", "src/layouts/sdk/*"],
+            "@views/*": ["src/views/web/*", "src/views/pc/*", "src/views/mobile/*", "src/layouts/sdk/*"],
             "@/*": ["src/*"]
         },
         "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
-    "exclude": ["node_modules"]
+    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "types/vue-global.d.ts", "tests/**/*.ts", "tests/**/*.tsx"],
+    "exclude": ["tmp", "dist", "node_modules", "src/**/*.json"]
 }
